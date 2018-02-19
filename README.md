@@ -1,5 +1,6 @@
 # ftrace
-Simple Function calls tracer
+Simple Function calls tracer 
+
 Target source must be compiled with symbols information
 
 # Required libraries
