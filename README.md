@@ -1,7 +1,8 @@
 # ftrace
 Simple Function calls tracer 
 
-Target source must be compiled with symbols information
+Target source must be compiled with symbols information (see example 1)
+And if not not compile with symbols breakpoints are set on call locations (see example 2)
 
 # Required libraries
 capstone, finixbit/elf-parser
@@ -21,7 +22,7 @@ $ make
 ./ftrace <cmd>
 ```
 
-# Example
+# Example 1
 ```
 ./ftrace /src/openssl dsaparam 1024
 
@@ -66,5 +67,16 @@ breakpoint[0x41e3c0]   call: destroy_ui_method
 breakpoint[0x41cd20]   call: __do_global_dtors_aux 
 breakpoint[0x41cca0]   call: deregister_tm_clones 
 breakpoint[0x4673f4]   call: _fini 
+```
+
+# Example 2
+```
+./ftrace /bin/ps
+
+breakpoint[0x40b83e] call: fn_4201144
+breakpoint[0x4035bb] call: fn_4206656
+breakpoint[0x408f9d] call: fn_4227072
+breakpoint[0x4090b0] call: fn_4223520
+breakpoint[0x4090cf] call: fn_4237168
 ```
 
