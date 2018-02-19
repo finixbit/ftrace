@@ -1,7 +1,8 @@
 # ftrace
 Simple Function calls tracer 
 
-Target source must be compiled with symbols information (see example 1)
+Target source must be compiled with symbols information (see example 1).
+
 And if not not compile with symbols breakpoints are set on call locations (see example 2)
 
 # Required libraries
