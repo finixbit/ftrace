@@ -15,7 +15,7 @@ using namespace elf_parser;
 
 
 int main(int argc, char* argv[]) {
-    char usage_banner[] = "usage: ./sdb [<cmd>]\n";
+    char usage_banner[] = "usage: ./ftrace [<cmd>]\n";
     if(argc < 2) {
         std::cerr << usage_banner;
         return -1;
