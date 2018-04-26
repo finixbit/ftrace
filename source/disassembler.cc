@@ -2,6 +2,7 @@
 #include <fcntl.h>       // O_RDONLY 
 #include <sys/stat.h> /* For the size of the file. , fstat */
 #include <sys/mman.h> /* mmap, MAP_PRIVATE */
+#include <inttypes.h>
 #include "disassembler.h"
 #include "callsite.h"
 
